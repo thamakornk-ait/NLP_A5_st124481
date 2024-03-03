@@ -203,11 +203,11 @@ def index():
         sentence_b = None
         similarity = None
 
-        sentence_a = request.form['input1']
-        sentence_b = request.form['input2']
-        similarity = calculate_similarity_model1(model3, input1, input2, 'cpu')
+        sentence_a = request.form['sentence_a']
+        sentence_b = request.form['sentence_b']
+        similarity = calculate_similarity_model1(model3, sentence_a, sentence_b, 'cpu')
         
-    return render_template('index.html', input1=input1, input2=input2,similarity=similarity)
+    return render_template('index.html', sentence_a=sentence_a, sentence_b=sentence_b,similarity=similarity)
 
 
 if __name__ == '__main__':
