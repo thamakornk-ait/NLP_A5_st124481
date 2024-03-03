@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+</head>
+<body>
+    <form action="/" method="post">
+        <label for="sentence1">Enter text:</label>
+        <input type="text" id="sentence_a" name="sentence_a" required>
+        <label for="sentence2">Enter text:</label>
+        <input type="text" id="sentence_b" name="sentence_b" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h3>similarity </h3>
+    {% if similarity %} 
+    <p>Cosine similarity value : {{ similarity }}</p>
+    {% endif %}
+</body>
+</html>
